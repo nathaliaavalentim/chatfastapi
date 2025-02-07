@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pymongo
+bcrypt
+pyjwt
+python-dotenv
+pymongo[srv]==3.10
+python-multipart
