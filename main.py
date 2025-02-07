@@ -83,7 +83,7 @@ def get_current_user(token: str = Depends(oauth2_scheme)):
     except jwt.InvalidTokenError:
         raise HTTPException(status_code=401, detail="Token inválido")
 
-# CRUD de Contatos
+#Contatos
 @app.post("/contacts/")
 def create_contact(contact: Contact, user: dict = Depends(get_current_user)):
     if db.contacts.find_one({"client_id": contact.client_id}):
@@ -96,7 +96,7 @@ def get_contact(client_id: str, user: dict = Depends(get_current_user)):
     contact = db.contacts.find_one({"client_id": client_id})
     if not contact:
         raise HTTPException(status_code=404, detail="Contato não encontrado")
-    contact["_id"] = str(contact["_id"])  # Convertendo ObjectId para string
+    contact["_id"] = str(contact["_id"])
     return contact
 
 @app.put("/contacts/{client_id}")

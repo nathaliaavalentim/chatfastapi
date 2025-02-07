@@ -1,4 +1,4 @@
-# Chat API - Desafio Positivo S+ usando FastAPI 
+# Chat API - Desafio Positivo S+ usando FastAPI
 
 Este projeto é uma API de chat baseada em FastAPI com autenticação JWT e integração com MongoDB para o desafio técnico para desenvolvedor Positivo S+.
 
@@ -39,9 +39,16 @@ Este projeto é uma API de chat baseada em FastAPI com autenticação JWT e inte
   - `POST /chat/end`: Encerra o chat.
   - `GET /reports`: Obtém relatórios.
 
+- **Contatos**
+  - `POST /contacts/`: Cria um novo contato.
+  - `GET /contacts/{client_id}`: Obtém informações de um contato.
+  - `PUT /contacts/{client_id}`: Atualiza um contato existente.
+  - `DELETE /contacts/{client_id}`: Exclui um contato.
+
 ## Observações
 - O MongoDB precisa estar configurado corretamente.
 - O JWT expira em 15 minutos.
 
 ## Licença
 MIT
+
